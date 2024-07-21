@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /*Landing Page*/
 .landing-page-container {
     padding: 10px;
@@ -11,16 +12,18 @@
     background-image: url('../assets/space.gif');
     background-repeat: no-repeat;
     background-size: cover;
-    
+    flex-direction: column;
+    text-align: center;
 }
 
 .intro-text h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 100px;
-    text-align: center;
+    font-size: 5rem; /* Adjusted for better responsiveness */
     color: rgb(177, 97, 0);
     animation: fadeInUp 2s ease-in-out;
+    margin: 0;
+    padding: 0 10px;
 }
 
 @keyframes fadeInUp {
@@ -36,7 +39,7 @@
 
 .intro-text h1 span {
     font-weight: 400;
-    letter-spacing: 25px;
+    letter-spacing: 15px; /* Adjusted for better responsiveness */
     color: bisque;
     text-shadow: 8px 6px 2px rgb(177, 97, 0);
     font-weight: 600;
@@ -45,18 +48,16 @@
 .intro-text p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 15px;
-    text-align: center;
+    font-size: 1rem; /* Adjusted for better responsiveness */
     color: rgb(255, 229, 197);
-    margin-top: -60px;
-    letter-spacing: 8px;
-    margin-top: 5px;
+    letter-spacing: 5px; /* Adjusted for better responsiveness */
+    margin-top: 10px;
+    padding: 0 10px;
 }
 
 .login-btn {
-    margin-top: -850px;
-    font-size: 25px;
-    margin-right: -750px;
+    margin-top: 20px; /* Adjusted for better positioning */
+    font-size: 1.5rem; /* Adjusted for better responsiveness */
     font-weight: 600;
 }
 
@@ -71,35 +72,34 @@
     color: rgb(248, 218, 49);
 }
 
+/* Tablet and below */
 @media (max-width: 768px) {
+    .intro-text h1 {
+        font-size: 3rem;
+    }
+    .intro-text h1 span {
+        letter-spacing: 10px;
+    }
+    .intro-text p {
+        font-size: 0.9rem;
+    }
+    .login-btn {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile and below */
+@media (max-width: 480px) {
     .intro-text h1 {
         font-size: 2rem;
     }
-    .intro-text p {
-        font-size: 12px;
-        margin-top: -30px;
-    }
-    .login-btn {
-        margin-top: -500px;
-        margin-right: -400px;
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .intro-text h1 {
-        font-size: 1.5rem;
+    .intro-text h1 span {
+        letter-spacing: 5px;
     }
     .intro-text p {
-        font-size: 10px;
-        margin-top: -20px;
+        font-size: 0.8rem;
     }
     .login-btn {
-        margin-top: -300px;
-        margin-right: -200px;
-        font-size: 14px;
+        font-size: 1rem;
     }
 }
-
-
-
